@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+  <style>
+  body {
+    background: #222;
+  }
+  bdy {
+    position: fixed;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    width: var(--wdl);
+    height: var(--hgl);
+    font-size: calc(4 * var(--wdl) / 100);
+    color: var(--cl1);
+    background-color: var(--bg1);
+    overflow: hidden;
+  }
+  #mntl {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    font-size: 300%;
+    
+  }
+  header {
+    background-color: var(--hdr1);
+    padding: calc(5 * var(--wdl) / 100);
+    text-align: center;
+    border-radius: calc(3 * var(--wdl) / 100);
+  }
+  :root {
+    --wdl: 100vw;
+    --hgl: 100vh;
+    --bg1: #000;
+    --cl1: #fff;
+    --hdr1: green;
+  }
+  </style>
+</head>
+<body>
+  godi
+  <bdy onclick="wid()">
+    <div>
+      <hr><p id="host" style="text-align: center; overflow: scroll;">MHY STUDIO WEB</p><hr>
+      
+      <header><b>Web Gabutch</b></header>
+      
+      
+    </div>
+    
+    <div id="mntl" onclick="opn([this, 11])">📱</div>
+  </bdy>
+  
+  <script>
+  function wid() {
+    if (screen.width > 150 * screen.height / 100) {
+      document.documentElement.style.setProperty('--wdl', '150vh');
+    }
+    document.getElementById('host').innerText = "https://mhycreations.blogspot.com";
+  }
+  function opn(a) {
+    if (a[1] === 11) {
+      if (a[0].innerText === "📲") {
+        a[0].innerText = "📱";
+      } else if (a[0].innerText === "📱") {
+        a[0].innerText = "📲";
+        
+      }
+    }
+  }
+  document.addEventListener('DOMContentLoaded', wid);
+  
+  
+  </script>
+</body>
+</html>
